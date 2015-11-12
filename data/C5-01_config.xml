@@ -1,0 +1,36 @@
+<PlusConfiguration version="2.1" PlusRevision="Plus-2.1.1.3163 - Win32">
+
+  <UsBoneFilter Threshold="10">
+    <ScanConversion 
+      TransducerName="Ultrasonix_C5-2"
+      TransducerGeometry="CURVILINEAR"
+      RadiusStartMm="64.0"
+      RadiusStopMm="145.0"
+      ThetaStartDeg="-25.0"
+      ThetaStopDeg="25.0"
+      OutputImageSizePixel="820 616"
+      TransducerCenterPixel="410 62"
+      OutputImageSpacingMmPerPixel="0.1526 0.1526" />
+  </UsBoneFilter>
+  
+  <CoordinateDefinitions>
+    <Transform From="Image" To="Probe"
+      Matrix="
+        -0.000731441	0.15273	-0.00405951	18.1647
+        -0.152668	-0.00057255	0.00596675	62.2402
+        0.00594936	0.00408495	0.152615	-3.0408
+        0	0	0	1"
+       Date="2013.10.24 17:57:00" Error="2.07" />
+
+  </CoordinateDefinitions>
+  
+  <VolumeReconstruction
+    OutputSpacing="0.5 0.5 0.5"
+    ClipRectangleOrigin="0 0"
+    ClipRectangleSize="820 616"
+    Interpolation="LINEAR"
+    Optimization="FULL"
+    Compounding="On"
+    FillHoles="Off" />
+
+</PlusConfiguration>
