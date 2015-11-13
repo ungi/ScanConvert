@@ -154,7 +154,7 @@ int main(int argc, char **argv)
   
   // Create lines image (this is the image which holds scan lines in rows).
 
-  int linesImageExtent[6]={0, numSamplesPerScanline, 0, numScanLines, 0, 0};
+  int linesImageExtent[6]={0, numSamplesPerScanline-1, 0, numScanLines-1, 0, 0};
   scanConverter->SetInputImageExtent(linesImageExtent);
 
   vtkSmartPointer<vtkImageData> linesImage = vtkSmartPointer<vtkImageData>::New();
