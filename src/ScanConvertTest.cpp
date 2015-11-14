@@ -35,6 +35,7 @@ void fillLinesImage(vtkUsScanConvert* scanConverter, vtkImageData* inputImageDat
       int pixelCoordY = start[1] + directionVectorY * pointIndex;
       if ( pixelCoordX<inputExtent[0] ||  pixelCoordX>inputExtent[1] || pixelCoordY<inputExtent[2] ||  pixelCoordY>inputExtent[3] )
       {
+        outputImageData->SetScalarComponentFromFloat(pointIndex, scanLine, 0, 0, 0);
         continue; // outside of the specified extent
       }
       inputPixelValue = inputImageData->GetScalarComponentAsFloat(pixelCoordX, pixelCoordY, 0, 0);
@@ -47,8 +48,8 @@ void fillLinesImage(vtkUsScanConvert* scanConverter, vtkImageData* inputImageDat
 int main(int argc, char **argv)
 {
 
-  const int numScanLines = 80;
-  const int numSamplesPerScanline = 100;
+  const int numScanLines = 100;
+  const int numSamplesPerScanline = 1500;
 
   bool printHelp = false;
   vtksys::CommandLineArguments args;
